@@ -9,8 +9,10 @@ def hello_world():
 
 
 @app.route('/say')
-def hello_world():
+def user_message():
     word = request.args.get("word")
+    if not word:
+        return "Please give some url parameter. Ex: ?word='This is I'"
     return word
 
 
