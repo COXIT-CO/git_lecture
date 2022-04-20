@@ -1,11 +1,12 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 
 @app.route('/', methods=['GET'])
 def hello_world():
-    return 'Hello World'
+    if request.method == 'GET':
+        return 'Hello World'
 
 
 if __name__ == '__main__':
