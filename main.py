@@ -1,4 +1,4 @@
-"""This is simple flask app"""
+"""This is simple flask app. Can be used like template"""
 from flask import Flask
 
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    """This is main route"""
+    """Serve homepage"""
     return 'Hello World'
 
 
